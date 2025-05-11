@@ -71,7 +71,7 @@ class InterfaceLocker:
         locale_path = os.path.join(
             self.plugin_dir,
             'i18n',
-            'InterfaceLocker_{}.qm'.format(locale))
+            'interface_locker_{}.qm'.format(locale))
 
         if os.path.exists(locale_path):
             self.translator = QTranslator()
@@ -227,10 +227,10 @@ class InterfaceLocker:
             with open(SETTINGS_FILE, 'w', encoding='utf-8') as f:
                 json.dump({"gui_state": state}, f, ensure_ascii=False, indent=2)
 
-            self.iface.messageBar().pushMessage(self.tr("Interface Locker"), self.tr("Interfaccia salvata (completa)."), level=0)
+            self.iface.messageBar().pushMessage("Interface Locker", "Interfaccia salvata (completa).", level=0)
 
         except Exception as e:
-            self.iface.messageBar().pushCritical(self.tr("Interface Locker"), self.tr(f"Errore salvataggio interfaccia: {e}"))
+            self.iface.messageBar().pushCritical("Interface Locker", f"Errore salvataggio interfaccia: {e}")
 
         finally:
             self.dlg.close()
@@ -238,7 +238,7 @@ class InterfaceLocker:
     def restore_interface_state(self):
         """Ripristina l'intero stato dell'interfaccia (toolbar, pannelli, layout)."""
         if not os.path.exists(SETTINGS_FILE):
-            self.iface.messageBar().pushWarning(self.tr("Interface Locker"), self.tr("Nessuna configurazione salvata trovata."))
+            self.iface.messageBar().pushWarning("Interface Locker", "Nessuna configurazione salvata trovata.")
             return
 
         try:
@@ -250,12 +250,12 @@ class InterfaceLocker:
                 main_window = self.iface.mainWindow()
                 restored = main_window.restoreState(QByteArray.fromBase64(gui_state.encode('utf-8')))
                 if restored:
-                    self.iface.messageBar().pushMessage(self.tr("Interface Locker"), self.tr("Interfaccia ripristinata (completa)."), level=0)
+                    self.iface.messageBar().pushMessage("Interface Locker", "Interfaccia ripristinata (completa).", level=0)
                 else:
-                    self.iface.messageBar().pushWarning(self.tr("Interface Locker"), self.tr("Ripristino fallito: stato non valido."))
+                    self.iface.messageBar().pushWarning("Interface Locker", "Ripristino fallito: stato non valido.")
 
         except Exception as e:
-            self.iface.messageBar().pushCritical(self.tr("Interface Locker"), self.tr(f"Errore ripristino interfaccia: {e}"))
+            self.iface.messageBar().pushCritical("Interface Locker", f"Errore ripristino interfaccia: {e}")
 
         finally:
             self.dlg.close()
