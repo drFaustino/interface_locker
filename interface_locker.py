@@ -68,10 +68,7 @@ class InterfaceLocker:
         self.plugin_dir = os.path.dirname(__file__)
         # initialize locale
         locale = QSettings().value('locale/userLocale')[0:2]
-        locale_path = os.path.join(
-            self.plugin_dir,
-            'i18n',
-            'interface_locker_{}.qm'.format(locale))
+        locale_path = os.path.join(self.plugin_dir, 'i18n', f'nterface_locker_{locale}.qm')
 
         if os.path.exists(locale_path):
             self.translator = QTranslator()

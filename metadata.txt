@@ -6,13 +6,11 @@
 name=Interface Locker
 qgisMinimumVersion=3.0
 description=Lock and restore toolbar on QGIS interface (Blocca e ripristina la barra degli strumenti nell’interfaccia di QGIS).
-version=0.2
+version=0.3
 author=dr. Geol. Faustino Cetraro
 email=geol-faustino@libero.it
 
-about=Allows you to restore the layout of the toolbars according to the saved settings. Once you have arranged the toolbars according to your preferences, organizing the interface as you see fit, start this tool and select the "Save Interface" command. Later, when you open a new QGIS project, the interface will be re-adapted based on the information in the loaded file. To restore the layout of the toolbars, simply restart the plugin and click on "Reset Interface". This way, all the toolbars and their settings will return exactly to the state they were in when you saved them.
-
-Consente di ripristinare la disposizione delle barre degli strumenti secondo le impostazioni salvate. Una volta sistemate le barre degli strumenti secondo le proprie preferenze, organizzando l'interfaccia come meglio si crede, si avvia questo strumento e si seleziona il comando "Salva interfaccia". Successivamente, aprendo un nuovo progetto di QGIS, l'interfaccia si riadatta in base alle informazioni del file caricato. Per ripristinare la disposizione delle barre è sufficiente riavviare il plugin e cliccare su "Ripristina interfaccia". In questo modo, tutte le barre degli strumenti e i relativi settaggi torneranno esattamente allo stato in cui erano al momento del salvataggio. 
+about=Allows you to restore the layout of the toolbars according to the saved settings. Once you have arranged the toolbars according to your preferences, organizing the interface as you see fit, start this tool and select the "Save Interface" command. Later, when you open a new QGIS project, the interface will be re-adapted based on the information in the loaded file. To restore the layout of the toolbars, simply restart the plugin and click on "Reset Interface". This way, all the toolbars and their settings will return exactly to the state they were in when you saved them. Consente di ripristinare la disposizione delle barre degli strumenti secondo le impostazioni salvate. Una volta sistemate le barre degli strumenti secondo le proprie preferenze, organizzando l'interfaccia come meglio si crede, si avvia questo strumento e si seleziona il comando "Salva interfaccia". Successivamente, aprendo un nuovo progetto di QGIS, l'interfaccia si riadatta in base alle informazioni del file caricato. Per ripristinare la disposizione delle barre è sufficiente riavviare il plugin e cliccare su "Ripristina interfaccia". In questo modo, tutte le barre degli strumenti e i relativi settaggi torneranno esattamente allo stato in cui erano al momento del salvataggio. 
 
 tracker=https://github.com/drFaustino/interface_locker
 repository=https://github.com/drFaustino/interface_locker
